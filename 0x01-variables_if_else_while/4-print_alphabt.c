@@ -2,8 +2,7 @@
 
 /**
  * main - Entry point 
- *description -  Prints alphabet in lowercase except for q and e.
- *
+ * description - Prints alphabet in lowercase except for q and e.
  * Return: Always 0.
  */
 int main(void)
