@@ -8,7 +8,7 @@
 
 void swap_int(int *a, int *b)
 {
-  var tmp = *a;
+  int tmp = *a;
   *a = *b;
   *b = tmp;
 }
