@@ -8,10 +8,8 @@
 
 void _puts(char *str)
 {
-var i = 0;
-for (; str[i] != '\0'; i++)
-{
-_putchar(str[i]);
-}
+while (*str)
+_putchar(*str++);
+
 _putchar('\n');
 }
