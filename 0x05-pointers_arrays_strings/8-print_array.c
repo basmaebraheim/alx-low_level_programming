@@ -7,7 +7,7 @@
 */
 void print_array(int *a, int n)
 {
-var index = 0;
+int index = 0;
 for (index = 0; index < n; index++)
 {
 if (index != n - 1)
