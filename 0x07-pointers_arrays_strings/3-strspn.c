@@ -14,10 +14,10 @@
 unsigned int _strspn(char *s, char *accept)
 {
     unsigned i = 0;
-    while(*s)
+    while(*s && *accept)
     {
         if (*s != *accept) break;
-        
+
         i++;
         *s++;
         *accept++;
