@@ -7,7 +7,7 @@
  *
  * @c: character
  *
- * Return: a pointer to the first occurrence of the character 
+ * Return: a pointer to the first occurrence of the character
  * c in the string s, or NULL if the character is not found
  */
 
