@@ -5,7 +5,9 @@
  */
 int getLength(char *s)
 {
-if(!*s) return (0);
+if(!*s) 
+return (0);
+
 return (1 + getLength(s + 1));
 }
 /**
