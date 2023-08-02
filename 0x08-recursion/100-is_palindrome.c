@@ -5,10 +5,8 @@
  */
 int getLength(char *s)
 {
-int length;
-for (length = 0; s[length]; length++)
-{}
-return (length);
+if(!*s) return (0);
+return (1 + getLength(s + 1));
 }
 /**
  * checkEqualChar - check if same char in string
