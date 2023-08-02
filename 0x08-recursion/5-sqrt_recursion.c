@@ -16,7 +16,7 @@ if (i > n)
 return (-1);
 }
 
-_sqrt_recursion_root(n, i + 1);
+return (_sqrt_recursion_root(n, i + 1));
 }
 
 /**
