@@ -6,13 +6,16 @@
 int getLength(char *s)
 {
 if(!*s) 
+{
 return (0);
-
+}
 return (1 + getLength(s + 1));
 }
 /**
  * checkEqualChar - check if same char in string
  * @s: string to be checked
+ * @first: character
+ * @second: character
  * Return: 1 if a char is a equal and 0 if not
  */
 int checkEqualChar(char *s, int first, int second)
@@ -27,9 +30,11 @@ if (first == second + 1 && s[first] == s[second])
 return (1);
 }
 
-if (s[first] != s[second]) return (0);
-
-return checkEqualChar(s, first + 1, second - 1);
+if (s[first] != s[second])
+{
+return (0);
+}
+return (checkEqualChar(s, first + 1, second - 1));
 }
 /**
  * is_palindrome - check if string palindrome
