@@ -5,7 +5,7 @@
  */
 int _sqrt_recursion(int n)
 {
-return _sqrt_recursion_root(n , 0);
+return (_sqrt_recursion_root(n , 0));
 }
 /**
  * _sqrt_recursion_root - natural square root of a number
@@ -15,8 +15,8 @@ return _sqrt_recursion_root(n , 0);
  */
 int _sqrt_recursion_root(int n, int i)
 {
-if (i * i == n) return i;
-if (i > n) return -1;
+if (i * i == n) return (i);
+if (i > n) return (-1);
 
 _sqrt_recursion_root(n , i + 1);
 }
