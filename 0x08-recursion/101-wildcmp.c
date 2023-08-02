@@ -1,6 +1,3 @@
-
-#include <stdio.h>
-#include <stdlib.h>
 /**
  * wildcmp - check identical strings
  * @s1: string

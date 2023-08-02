@@ -1,7 +1,3 @@
-
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
  * getLength - get string length
  * @s: string
