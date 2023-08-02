@@ -7,10 +7,16 @@
 int is_prime_number_ceck(int n, int i)
 {
 
-if (i >= n) return (1);
-if (n % i == 0) return (0);
+if (i >= n)
+{
+return (1);
+}
+if (n % i == 0)
+{
+return (0);
+}
 
-return (is_prime_number_ceck(n , i + 1));
+return (is_prime_number_ceck(n, i + 1));
 }
 /**
  * is_prime_number - check if number is prime
@@ -19,6 +25,9 @@ return (is_prime_number_ceck(n , i + 1));
  */
 int is_prime_number(int n)
 {
-if (n < 2) return (0);
-return (is_prime_number_ceck(n , 2));
+if (n < 2)
+{
+return (0);
+}
+return (is_prime_number_ceck(n, 2));
 }
