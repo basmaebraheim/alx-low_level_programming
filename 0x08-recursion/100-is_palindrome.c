@@ -29,7 +29,7 @@ return (1);
 
 if (s[first] != s[second]) return (0);
 
-checkEqualChar(s, first + 1, second - 1);
+if (s[first] == s[second]) return checkEqualChar(s, first + 1, second - 1);
 }
 /**
  * is_palindrome - check if string palindrome
