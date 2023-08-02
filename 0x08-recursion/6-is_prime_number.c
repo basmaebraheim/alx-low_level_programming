@@ -19,8 +19,8 @@ return (is_prime_number_ceck(n , i + 1));
  */
 int is_prime_number(int n)
 {
-if (n < 2) return 0;
-return is_prime_number_ceck(n , 2);
+if (n < 2) return (0);
+return (is_prime_number_ceck(n , 2));
 }
 /**
  * main - check the code

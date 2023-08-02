@@ -11,7 +11,7 @@ int getLength(char *s)
 {
 int length;
 for (length = 0; s[length]; length++);
-return length;
+return (length);
 }
 /**
  * checkEqualChar - check if same char in string
@@ -21,10 +21,10 @@ return length;
 int checkEqualChar(char *s,int first ,int second)
 {
 
-if (first == second) return 1;
-if (first == second + 1 && s[first] == s[second]) return 1;
+if (first == second) return (1);
+if (first == second + 1 && s[first] == s[second]) return (1);
 
-if (s[first] != s[second]) return 0;
+if (s[first] != s[second]) return (0);
 
 if (s[first] == s[second]) checkEqualChar(s, first + 1 , second - 1);
 }
@@ -36,7 +36,7 @@ if (s[first] == s[second]) checkEqualChar(s, first + 1 , second - 1);
 int is_palindrome(char *s)
 {
 int length = getLength(s);
-return checkEqualChar(s,0 , length - 1);
+return (checkEqualChar(s,0 , length - 1));
 }
 /**
  * main - check the code
