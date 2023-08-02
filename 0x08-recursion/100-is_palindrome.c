@@ -30,6 +30,7 @@ return (1);
 if (s[first] != s[second]) return (0);
 
 if (s[first] == s[second]) checkEqualChar(s, first + 1, second - 1);
+return 1;
 }
 /**
  * is_palindrome - check if string palindrome
