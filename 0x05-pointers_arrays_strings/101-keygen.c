@@ -4,7 +4,7 @@
 
 /**
  * main - Generates random valid passwords for the
- *        program 101-crackme.
+ *program 101-crackme.
  *
  * Return: Always 0.
  */

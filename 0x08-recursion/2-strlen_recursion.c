@@ -6,11 +6,11 @@
 int _strlen_recursion(char *s)
 {
 
-    if (*s)
-    {
-        return 1 + _strlen_recursion(s + 1);
-    }
-    return 0;
+if (*s)
+{
+return 1 + _strlen_recursion(s + 1);
+}
+return 0;
 
 }
 /**
@@ -20,9 +20,9 @@ int _strlen_recursion(char *s)
  */
 int main(void)
 {
-    int n;
+int n;
 
-    n = _strlen_recursion("Corbin Coleman");
-    printf("%d\n", n);
-    return (0);
+n = _strlen_recursion("Corbin Coleman");
+printf("%d\n", n);
+return (0);
 }

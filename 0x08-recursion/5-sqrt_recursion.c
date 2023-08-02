@@ -5,7 +5,7 @@
  */
 int _sqrt_recursion(int n)
 {
-    return _sqrt_recursion_root(n , 0);
+return _sqrt_recursion_root(n , 0);
 }
 /**
  * _sqrt_recursion_root - natural square root of a number
@@ -15,10 +15,10 @@ int _sqrt_recursion(int n)
  */
 int _sqrt_recursion_root(int n, int i)
 {
-    if (i * i == n) return i;
-    if (i > n) return -1;
+if (i * i == n) return i;
+if (i > n) return -1;
 
-    _sqrt_recursion_root(n , i + 1);
+_sqrt_recursion_root(n , i + 1);
 }
 /**
  * main - check the code
@@ -27,20 +27,20 @@ int _sqrt_recursion_root(int n, int i)
  */
 int main(void)
 {
-    int r;
+int r;
 
-    r = _sqrt_recursion(1);
-    printf("%d\n", r);
-    r = _sqrt_recursion(1024);
-    printf("%d\n", r);
-    r = _sqrt_recursion(16);
-    printf("%d\n", r);
-    r = _sqrt_recursion(17);
-    printf("%d\n", r);
-    r = _sqrt_recursion(25);
-    printf("%d\n", r);
-    r = _sqrt_recursion(-1);
-    printf("%d\n", r);
+r = _sqrt_recursion(1);
+printf("%d\n", r);
+r = _sqrt_recursion(1024);
+printf("%d\n", r);
+r = _sqrt_recursion(16);
+printf("%d\n", r);
+r = _sqrt_recursion(17);
+printf("%d\n", r);
+r = _sqrt_recursion(25);
+printf("%d\n", r);
+r = _sqrt_recursion(-1);
+printf("%d\n", r);
 
-    return (0);
+return (0);
 }
