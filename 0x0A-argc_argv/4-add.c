@@ -18,7 +18,7 @@ printf("0\n");
 return (1);
 }
 
-while(i < argc)
+for (i = 1; argv[i]; i++)
 {
 number = strtol(argv[i], &flag, 10);
 
@@ -29,7 +29,6 @@ return (1);
 }
 
 sum += number;
-i++;
 }
 printf("%d\n", sum);
 return (0);
