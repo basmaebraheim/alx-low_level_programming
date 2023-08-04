@@ -13,17 +13,18 @@ if (argc == 1)
 printf("0\n");
 }
 
-int i = 0;
-int sum = 0;
+int i, number, sum = 0;
 char *flag;
 
 while(i < argc)
 {
-sum += strtol(argv[i], &flag, 10);
+number = strtol(argv[i], &flag, 10);
 if(*flag)
 {
 printf("Error\n");
+return (1);
 }
+sum += number;
 i++;
 }
 return (1);
