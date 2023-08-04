@@ -7,14 +7,14 @@
  * Return: 0
  */
 int main(int argc, char **argv)
-{
+{    
+int i, number, sum = 0;
+char *flag;
+
 if (argc == 1)
 {
 printf("0\n");
 }
-
-int i, number, sum = 0;
-char *flag;
 
 while(i < argc)
 {
