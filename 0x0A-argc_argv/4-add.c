@@ -8,7 +8,7 @@
  * Return: 0
  */
 int main(int argc, char **argv)
-{    
+{
 int i, number, sum = 0;
 char *flag;
 
@@ -22,7 +22,7 @@ for (i = 1; argv[i]; i++)
 {
 number = strtol(argv[i], &flag, 10);
 
-if(*flag)
+if (*flag)
 {
 printf("Error\n");
 return (1);
