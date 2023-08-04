@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 int i, number, sum = 0;
 char *flag;
 
-if (argc == 1)
+if (argc < 2)
 {
 printf("0\n");
 return (1);
