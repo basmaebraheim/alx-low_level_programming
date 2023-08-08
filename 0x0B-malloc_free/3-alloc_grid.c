@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * *alloc_grid - generate grid by width & height
- * @widh: height input
+ * @width: height input
  * @height: width input
  *
  * Return: pointer to grid
