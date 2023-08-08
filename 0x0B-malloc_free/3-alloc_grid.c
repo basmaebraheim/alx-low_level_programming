@@ -37,14 +37,14 @@ if (width < 1 && height < 1)
 {
 return (NULL);
 }
-arr = (int **) malloc(sizeof(int *) * height);
+arr = malloc(sizeof(int *) * height);
 if (arr == NULL)
 {
 return (NULL);
 }
 while (i < height)
 {
-arr[i] = (int *) calloc(sizeof(int), width);
+arr[i] = calloc(sizeof(int), width);
 if (arr[i] == NULL)
 {
 free_grid(arr, height);
