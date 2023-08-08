@@ -10,20 +10,25 @@
 char *_strdup(char *str)
 {
 char *strCopy;
-int length, i = 0;
+int length = 0, i = 0;
 
 if (!*str)
 {
 return (NULL);
 }
-length = getStringLength(str);
-strCopy = (char *) malloc(length);
+
+while (str[length])
+{
+length++;
+}
+
+strCopy = (char *) malloc(length + 1);
 if (!*strCopy)
 {
 return (NULL);
 }
 
-while (i < length)
+while (i < length + 1)
 {
 strCopy[i] = str[i];
 i++;
@@ -32,20 +37,5 @@ i++;
 return (strCopy);
 }
 
-/**
- * *getStringLength - get string length
- * @str: string to get length
- *
- * Return: string length
- */
-int getStringLength(char *str)
-{
 
-int i = 0;
-while (str[i])
-{
-i++;
-}
-return (i + 1);
-}
 
