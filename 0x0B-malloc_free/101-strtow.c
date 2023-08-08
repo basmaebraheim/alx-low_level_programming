@@ -3,7 +3,7 @@
 
 /**
  * getStringWordCount - get count of words
- * @s: string 
+ * @s: string
  *
  * Return: number of words
  */
