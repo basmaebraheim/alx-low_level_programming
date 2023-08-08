@@ -2,11 +2,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * *alloc_grid - concatenates two strings
- * @s1: string input
- * @s2: string input
+ * *alloc_grid - get pointer to a 2 dimensional array of integers.
+ * @width: width input
+ * @height: height input
  *
- * Return: pointer to the copied string (Success), NULL (Error)
+ * Return: pointer to a 2 dimensional array of integers.
  */
 int **alloc_grid(int width, int height)
 {
@@ -23,7 +23,7 @@ return (NULL);
 }
 while (i < height)
 {
-arr[i] = (int *) calloc(sizeof(int) , width);
+arr[i] = (int *) calloc(sizeof(int), width);
 i++;
 }
 return (arr);
