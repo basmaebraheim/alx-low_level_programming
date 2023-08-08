@@ -27,21 +27,18 @@ if (s3 == NULL)
 {
 return (NULL);
 }
-
 while (s1 && i < length1)
 {
 s3[i] = s1[i];
 i++;
 }
+
 while (s2 && i < (length1 + length2))
 {
-s3[i] = s2[i - length2];
+s3[i] = s2[i - length1];
 i++;
 }
+
 s3[i] = '\0';
 return (s3);
 }
-
-
-
-
