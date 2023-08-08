@@ -2,27 +2,6 @@
 #include "main.h"
 
 /**
- * free_grid - frees a 2 dimensional grid previously
- * created by your alloc_grid function
- * @grid: grid to free
- * @height: height of grid free
- *
- * Return: void.
- */
-void free_grid(int **grid, int height)
-{
-int i;
-
-if (grid == NULL || height == 0)
-return;
-
-for (i = 0; i < height; i++)
-free(grid[i]);
-
-free(grid);
-}
-
-/**
  * *alloc_grid - generate grid by width & height
  * @width: height input
  * @height: width input
@@ -31,26 +10,34 @@ free(grid);
  */
 int **alloc_grid(int width, int height)
 {
-int **arr, i = 0;
+int **grid, i = 0, j =0;
 
 if (width < 1 && height < 1)
 {
 return (NULL);
 }
-arr = (int **) malloc(sizeof(int *) * height);
-if (arr == NULL)
+grid = (int **) malloc(sizeof(int *) * height);
+if (grid == NULL)
 {
 return (NULL);
 }
-while (i < height)
+for (i = 0; i < height; i++)
 {
-arr[i] = (int *) calloc(sizeof(int), width);
-if (arr[i] == NULL)
+grid[i] = malloc(width * sizeof(int));
+if (grid[i] == NULL)
 {
-free_grid(arr, height);
+while (i >= 0)
+{
+free(grid[i]);
+i--;
+}
+free(grid);
 return (NULL);
 }
-i++;
+while (j < width)
+{
+grid[i][j] = 0;
+j++;
 }
-return (arr);
+return (grid);
 }
