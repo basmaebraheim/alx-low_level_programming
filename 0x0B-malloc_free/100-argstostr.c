@@ -1,0 +1,35 @@
+#include <stdlib.h>
+#include "main.h"
+#include <stdio.h>
+/**
+ * *alloc_grid - generate grid by width & height
+ * @width: height input
+ * @height: width input
+ *
+ * Return: pointer to grid
+ */
+int **alloc_grid(int width, int height)
+{
+int **arr, i = 0;
+
+if (width < 1 && height < 1)
+{
+return (NULL);
+}
+arr = (int **) malloc(sizeof(int *) * height);
+if (arr == NULL)
+{
+return (NULL);
+}
+while (i < height)
+{
+arr[i] = (int *) calloc(sizeof(int), width);
+if (arr[i] == NULL)
+{
+free_grid(arr ,i);
+return (NULL);
+}
+i++;
+}
+return (arr);
+}
