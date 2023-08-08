@@ -24,7 +24,7 @@ return (NULL);
 while (i < height)
 {
 arr[i] = (int *) calloc(sizeof(int) , width);
-if (!arr[i])
+if (arr[i] == NULL)
 {
 flag = 1;
 break;
