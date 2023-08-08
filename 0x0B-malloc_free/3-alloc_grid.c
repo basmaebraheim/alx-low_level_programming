@@ -39,7 +39,7 @@ while (i > -1)
 free(arr[i]);
 i--;
 }
-free(arr)
+free(arr);
 return (NULL);
 }
 
