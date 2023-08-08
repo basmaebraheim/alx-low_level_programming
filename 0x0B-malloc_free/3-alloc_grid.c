@@ -47,7 +47,7 @@ while (i < height)
 arr[i] = (int *) calloc(sizeof(int), width);
 if (arr[i] == NULL)
 {
-free_grid(arr ,i);
+free_grid(arr, height);
 return (NULL);
 }
 i++;
