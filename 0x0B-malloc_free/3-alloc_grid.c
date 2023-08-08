@@ -10,7 +10,7 @@
  */
 int **alloc_grid(int width, int height)
 {
-int **arr, i = 0, flag = 0;
+int **arr, i = 0;
 
 if (width < 1 && height < 1)
 {
@@ -26,22 +26,10 @@ while (i < height)
 arr[i] = (int *) calloc(sizeof(int), width);
 if (arr[i] == NULL)
 {
-flag = 1;
-break;
+free_grid(arr ,i);
+return (NULL);
 }
 i++;
 }
-
-if (flag == 1)
-{
-while (i > -1)
-{
-free(arr[i]);
-i--;
-}
-free(arr);
-return (NULL);
-}
-
 return (arr);
 }
