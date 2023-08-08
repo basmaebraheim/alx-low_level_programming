@@ -25,6 +25,7 @@ return (NULL);
 while (i < length)
 {
 strCopy[i] = str[i];
+i++
 }
 return (strCopy);
 }
