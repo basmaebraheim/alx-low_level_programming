@@ -1,35 +1,50 @@
-#include <stdlib.h>
 #include "main.h"
-#include <stdio.h>
+#include <stdlib.h>
 /**
- * *alloc_grid - generate grid by width & height
- * @width: height input
- * @height: width input
- *
- * Return: pointer to grid
- */
-int **alloc_grid(int width, int height)
+ *argstostr - concatenates all arguments of the program.
+*@ac: argument count.
+*@av: pointer to array of size ac.
+*Return: NULL if ac == 0 or av == null, Pointer to new string.
+*NULL on fail.
+*/
+char *argstostr(int ac, char **av)
 {
-int **arr, i = 0;
+int i, j, k, size;
+char *arg;
 
-if (width < 1 && height < 1)
-{
+size = 0;
+k = 0;
+if (ac == 0 || av == NULL)
 return (NULL);
-}
-arr = (int **) malloc(sizeof(int *) * height);
-if (arr == NULL)
+i = 0;
+while (i < ac)
 {
-return (NULL);
-}
-while (i < height)
+j = 0;
+while (av[i][j])
 {
-arr[i] = (int *) calloc(sizeof(int), width);
-if (arr[i] == NULL)
-{
-free_grid(arr ,i);
-return (NULL);
+size++;
+j++;
 }
+size++;
 i++;
 }
-return (arr);
+arg = malloc((sizeof(char) * size) +1);
+if (arg == NULL)
+return (NULL);
+i = 0;
+while (i < ac)
+{
+j = 0;
+while (av[i][j])
+{
+arg[k] = av[i][j];
+j++;
+k++;
+}
+arg[k] = '\n';
+k++;
+i++;
+}
+arg[k] = '\0';
+return (arg);
 }
