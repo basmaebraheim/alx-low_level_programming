@@ -24,7 +24,7 @@ while (i < size)
 {
 if (cmp(array[i]))
 {
-return i;
+return (i);
 }
 i++;
 }}
