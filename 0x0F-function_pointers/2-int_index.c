@@ -1,13 +1,31 @@
-#include <stdlib.h>
-#include <string.h>
+#include "function_pointers.h"
 
 /**
-  * get_op_func - ...
-  * @s: ...
+  * int_index - run function on array of integers
+  * @array: array of integers
+  * @size: size of array
+  * @cmp: pointer of compare function
   *
-  * Return: ...
+  * Return: number
   */
-int (*get_op_func(char *s))(int, int)
+int int_index(int *array, int size, int (*cmp)(int))
 {
-	 
+	int i = 0;
+
+	if (size > 0)
+	{
+		if (array && cmp)
+		{
+			while (i < size)
+			{
+				if (cmp(array[i]))
+					return (i);
+
+
+				i++;
+			}
+		}
+	}
+
+	return (-1);
 }
