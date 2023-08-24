@@ -12,7 +12,7 @@ list_t *newNode;
 int strLength = 0;
 
 newNode = malloc(sizeof(list_t));
-if (newNode == NULL)
+if (!newNode || !head)
 return (NULL);
 newNode->str = strdup(str);
 
