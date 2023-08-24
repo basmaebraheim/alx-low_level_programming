@@ -18,7 +18,7 @@ int sum_them_all(const unsigned int n, ...)
 		return (0);
 
 	while (i < n)
-	{	
+	{
 		sum += va_arg(listOfArgs, int);
 		i++;
 	}
