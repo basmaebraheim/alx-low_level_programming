@@ -22,13 +22,13 @@ while (str[strLength])
 strLength++;
 }
 
-newStr = malloc(sizeof(char) * (strLength));
+newStr = malloc(sizeof(char) * (strLength) + 1);
 if (newStr == NULL)
 {
 return (NULL);
 }
 
-while (i < strLength)
+while (i < strLength + 1)
 {
 newStr[i] = str[i];
 i++;
