@@ -31,10 +31,10 @@ newStr = malloc((sizeof(char) * newStrSize) +1);
 if (newStr == NULL)
 return (NULL);
 i = 0;
+k = 0;
 while (i < ac)
 {
 j = 0;
-k = 0;
 while (av[i][j])
 {
 newStr[k] = av[i][j];
