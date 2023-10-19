@@ -8,13 +8,15 @@
  */
 void free_list(list_t *head)
 {
+list_t *nextNode;
 
 if (head)
 {
-free_list(head->next);
+nextNode = head->next;
 if (head->str)
 free(head->str);
 free(head);
+head = nextNode;
 }
 
 }
