@@ -13,6 +13,8 @@ list_t *nextNode;
 while (head)
 {
 nextNode = head->next;
+if (head->str)
+free(head->str);
 free(head);
 head = nextNode;
 }
