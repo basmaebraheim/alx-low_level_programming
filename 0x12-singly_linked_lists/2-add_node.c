@@ -24,9 +24,14 @@ return (NULL);
 while (newNode->str[i])
 i++;
 newNode->len = i;
-
-if (*head)
-newNode->next = *head;
-
+if (!*head)
+{
+*head = newNode;
 return (newNode);
+}
+
+newNode->next = *head;
+*head = newNode;
+
+return (*head);
 }
