@@ -1,18 +1,5 @@
 #include "lists.h"
 /**
- * _strlen - get string length
- * @str: string
- * Return: length of string
- */
-unsigned int _strlen(char *str)
-{
-unsigned int i;
-
-for (i = 0; str[i]; i++)
-;
-return (i);
-}
-/**
  * add_node- add new node to front list.
  * @head: list head
  * @str: new node str
@@ -21,6 +8,7 @@ return (i);
 list_t *add_node(list_t **head, const char *str)
 {
 list_t *newNode;
+unsigned int i;
 
 if (!str)
 return (NULL);
@@ -35,7 +23,9 @@ if (!newNode->str)
 free(newNode);
 return (NULL);
 }
-newNode->len = _strlen(newNode->str);
+for (i = 0; str[i]; i++)
+;
+newNode->len = i;
 
 if (*head)
 newNode->next = *head;
