@@ -15,7 +15,7 @@ return (NULL);
 
 newNode = malloc(sizeof(newNode));
 if (!newNode)
-return NULL;
+return (NULL);
 
 newNode->str = strdup(str);
 if (!newNode->str)
