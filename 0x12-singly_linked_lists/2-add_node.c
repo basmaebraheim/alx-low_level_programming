@@ -12,19 +12,17 @@ unsigned int i;
 
 if (!str)
 return (NULL);
-
 newNode = malloc(sizeof(newNode));
 if (!newNode)
 return (NULL);
-
 newNode->str = strdup(str);
 if (!newNode->str)
 {
 free(newNode);
 return (NULL);
 }
-for (i = 0; str[i]; i++)
-;
+while (newNode->str[i])
+i++;
 newNode->len = i;
 
 if (*head)
