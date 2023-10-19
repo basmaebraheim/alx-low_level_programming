@@ -1,1 +1,1 @@
-singly liked list
+singly_linked_list
