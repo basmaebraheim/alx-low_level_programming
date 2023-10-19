@@ -5,7 +5,7 @@
  * @h: input list
  * Return: the number of nodes.
  */
-size_t size_t print_list(const list_t *h)
+size_t print_list(const list_t *h)
 {
 	int i = 0;
 	while (h)
