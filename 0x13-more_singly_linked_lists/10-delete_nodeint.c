@@ -25,7 +25,7 @@ deleteNode = temp->next;
 if (deleteNode == NULL)
 return (-1);
 temp->next = deleteNode->next;
-free (deleteNode);
+free(deleteNode);
 return (1);
 }
 temp = temp->next;
