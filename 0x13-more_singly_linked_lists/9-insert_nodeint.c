@@ -3,6 +3,8 @@
 /**
  * insert_nodeint_at_index - insert node in list index.
  * @head: list head pointer
+ * @idx: index to add new node
+ * @n: number for new node
  * Return: sum of list int n.
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
