@@ -21,7 +21,7 @@ node->n = n;
 for (i = 0; i < idx; i++)
 {
 if (temp == NULL)
-return (NULL);
+goto end;
 if (i == idx - 1)
 {
 node->next = temp->next;
@@ -30,6 +30,7 @@ return (node);
 }
 temp = temp->next;
 }
+end:
 free(node);
 return (NULL);
 }
