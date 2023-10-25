@@ -32,8 +32,9 @@ head = head->next;
 free(list);
 return (num);
 }
+
 /**
- * reallocatelist - reallocates memory for an array of pointers
+ * reallocatelist -  reallocate memory
  * to the nodes in a linked list
  * @list: the old list to append
  * @size: size of the new list (always one more than the old list)
