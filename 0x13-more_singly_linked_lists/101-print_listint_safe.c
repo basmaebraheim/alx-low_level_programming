@@ -25,7 +25,7 @@ return (num);
 }
 }
 num++;
-list = reallocatelist(list, num, head);
+list = r_list(list, num, head);
 printf("[%p] %d\n", (void *)head, head->n);
 head = head->next;
 }
@@ -34,7 +34,7 @@ return (num);
 }
 
 /**
- * reallocatelist -  reallocate memory
+ * r_list -  reallocate memory
  * to the nodes in a linked list
  * @list: the old list to append
  * @size: size of the new list (always one more than the old list)
@@ -42,7 +42,7 @@ return (num);
  *
  * Return: pointer to the new list
  */
-const listint_t **reallocatelist(const listint_t **list, size_t size, const listint_t *new)
+const listint_t **r_list(const listint_t **list, size_t size, const listint_t *new)
 {
 const listint_t **newlist;
 size_t i;
