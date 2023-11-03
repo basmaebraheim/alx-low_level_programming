@@ -24,3 +24,17 @@ if (length == -1)
 return (-1);
 return (1);
 }
+
+/**
+ * _strlength - get string length
+ * @str: pointer to the string
+ * Return: string length.
+ */
+size_t _strlength(char *str)
+{
+	size_t i;
+
+	for (i = 0; str[i]; i++)
+		;
+	return (i);
+}
