@@ -18,11 +18,7 @@ fd = open(filename, O_WRONLY | O_APPEND);
 if (fd == -1)
 return (-1);
 if (text_content != NULL)
-{
-for (length = 0; str[length]; length++)
-;
-length = write(fd, text_content, length);
-}
+length = write(fd, text_content, _strlength(text_content));
 close(fd);
 if (length == -1)
 return (-1);

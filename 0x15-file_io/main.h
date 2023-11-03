@@ -7,6 +7,18 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
+/**
+ * _strlength - get string length
+ * @str: pointer to the string
+ */
+size_t _strlength(char *str)
+{
+	size_t i;
+
+	for (i = 0; str[i]; i++)
+		;
+	return (i);
+}
 
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
