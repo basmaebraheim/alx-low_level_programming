@@ -10,6 +10,7 @@
 /**
  * _strlength - get string length
  * @str: pointer to the string
+ * Return: string length.
  */
 size_t _strlength(char *str)
 {
