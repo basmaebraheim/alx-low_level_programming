@@ -14,11 +14,10 @@ newNode = malloc(sizeof(dlistint_t));
 if (!newNode)
 return (NULL);
 newNode->n = n;
-
-if (!(*head))
-(*head)->prev = newNode;
 newNode->next = *head;
 newNode->prev = NULL;
+if (*head != NULL)
+(*head)->prev = newNode;
 *head = newNode;
 return (newNode);
 }
