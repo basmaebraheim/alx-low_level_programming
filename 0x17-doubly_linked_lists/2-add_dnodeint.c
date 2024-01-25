@@ -15,15 +15,10 @@ if (!newNode)
 return (NULL);
 newNode->n = n;
 
-if (!*head)
-return (newNode);
-
-while ((*head)->prev)
-{
-*head = (*head)->prev;
-}
+if (!(*head))
 (*head)->prev = newNode;
 newNode->next = *head;
-**head = *newNode;
-return newNode;
+newNode->prev = NULL;
+*head = newNode;
+return (newNode);
 }
