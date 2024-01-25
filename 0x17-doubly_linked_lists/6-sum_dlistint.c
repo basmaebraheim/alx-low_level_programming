@@ -1,7 +1,6 @@
 #include "lists.h"
 /**
- * get_dnodeint_at_index - get the sum of all
- * the data (n) of a dlistint_t linked list.
+ * get_dnodeint_at_index - get the sum data in list.
  * @head: pointer to head of list
  *
  * Return: the sum of all the data (n) of a dlistint_t linked list.
