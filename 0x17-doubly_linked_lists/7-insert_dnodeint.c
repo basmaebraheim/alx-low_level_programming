@@ -27,7 +27,10 @@ i++;
 }
 
 if (!lastNode)
+{
+free(newNode);
 return (NULL);
+}
 
 lastNode->prev->next = newNode;
 newNode->next = lastNode;
