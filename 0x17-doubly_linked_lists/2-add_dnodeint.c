@@ -12,9 +12,11 @@ dlistint_t *newNode = NULL;
 
 newNode->n = n;
 newNode = malloc(sizeof(dlistint_t));
-if (!newNode) return (NULL);
+if (!newNode)
+return (NULL);
 
-if (!*head) return (newNode);
+if (!*head)
+return (newNode);
 
 while ((*head)->prev)
 {
