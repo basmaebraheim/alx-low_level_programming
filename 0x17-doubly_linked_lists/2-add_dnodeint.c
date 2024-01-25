@@ -23,5 +23,6 @@ while ((*head)->prev)
 *head = (*head)->prev;
 }
 (*head)->prev = newNode;
+newNode->next = *head;
 return (newNode);
 }
