@@ -34,7 +34,7 @@ while (lastNode->next && i < idx)
 lastNode = lastNode->next;
 i++;
 }
-if (i != idx)
+if (i + 1 < idx)
 {
 free(newNode);
 return (NULL);
