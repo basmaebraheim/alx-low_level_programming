@@ -29,11 +29,6 @@ newNode->next = *h;
 *h = newNode;
 return (newNode);
 }
-if(!lastNode)
-{
-*h = newNode;
-return (newNode);
-}
 while (lastNode->next && i < idx)
 {
 lastNode = lastNode->next;
