@@ -14,26 +14,21 @@ dlistint_t *newNode, *lastNode;
 
 if (*h == NULL && idx != 0)
 return (NULL);
-
 newNode = malloc(sizeof(dlistint_t));
 if (!newNode)
 return (NULL);
-
 newNode->n = n;
 newNode->next = NULL;
 newNode->prev = NULL;
-
 lastNode = *h;
 if (idx == 0)
 {
 if (*h)
 (*h)->prev = newNode;
-
 newNode->next = *h;
 *h = newNode;
 return (newNode);
 }
-
 while (lastNode->next && i < idx)
 {
 lastNode = lastNode->next;
@@ -44,13 +39,10 @@ if (i != idx)
 free(newNode);
 return (NULL);
 }
-
 if (lastNode->prev)
 lastNode->prev->next = newNode;
-
 newNode->next = lastNode;
 newNode->prev = lastNode->prev;
 lastNode->prev = newNode;
-
 return (newNode);
 }
