@@ -16,11 +16,11 @@ if (*h == NULL)
 return (NULL);
 
 if (idx == 0)
-return (add_dnodeint(h, n));
+return (add_dnodeint(*h, n));
 
-length = dlistint_len(h);
+length = dlistint_len(*h);
 if (idx == length)
-return (add_dnodeint_end(h, n));
+return (add_dnodeint_end(*h, n));
 
 newNode = malloc(sizeof(dlistint_t));
 if (!newNode)
@@ -35,7 +35,7 @@ lastNode = lastNode->next;
 i++;
 }
 if (i != idx)
-return (add_dnodeint_end(h, n));
+return (add_dnodeint_end(*h, n));
 
 if (lastNode->prev)
 lastNode->prev->next = newNode;
