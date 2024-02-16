@@ -30,7 +30,7 @@ free(node);
 return (NULL);
 }
 node->next = NULL;
-return node;
+return (node);
 }
 
 /**
