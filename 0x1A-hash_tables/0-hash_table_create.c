@@ -11,13 +11,13 @@ int i = 0;
 hash_table_t *table = NULL;
 table = malloc(sizeof(hash_table_t));
 
-if(!table)
+if (!table)
 return (NULL);
 
 table->size = size;
 
 table->array = malloc(sizeof(hash_node_t));
-if(!table->array)
+if (!table->array)
 {
 free(table);
 return (NULL);
