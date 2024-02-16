@@ -28,5 +28,5 @@ flag = 1;
 temp = temp->next;
 }
 }
-printf("}");
+printf("}\n");
 }
