@@ -15,7 +15,7 @@ if (!ht || !ht->array)
 return;
 
 printf("{");
-for (i = 0;i < ht->size; i++)
+for (i = 0; i < ht->size; i++)
 {
 temp = ht->array[i];
 
