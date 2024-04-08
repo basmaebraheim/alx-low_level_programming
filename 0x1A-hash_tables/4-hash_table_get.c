@@ -14,7 +14,7 @@ unsigned long int index;
 hash_node_t *temp;
 
 if (!ht || !key)
-return (0);
+return (NULL);
 
 index = key_index((const unsigned char *)key, ht->size);
 temp = ht->array[index];
